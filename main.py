@@ -1,6 +1,3 @@
-
-## main.py
-```python
 from collections import deque
 
 
@@ -28,7 +25,22 @@ def bfs_distances(graph, start):
     # TODO Step 7: Test using small graph examples to verify the distances.
     # TODO Step 8: Make sure your solution is O(V + E), not slower.
 
-    raise NotImplementedError("bfs_distances is not implemented yet")
+    if start not in graph:
+        return {}
+    
+    dist = {start: 0}
+    queue = deque([start])
+    
+    while queue:
+        current = queue.popleft()
+        current_dist = dist[current]
+        
+        for neighbor in graph[current]:
+            if neighbor not in dist:
+                dist[neighbor] = current_dist + 1
+                queue.append(neighbor)
+    
+    return dist
 
 
 if __name__ == "__main__":

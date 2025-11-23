@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Run Tests",
+      "setup": "",
+      "run": "pytest tests/test_hw02.py -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 100
+    }
+  ]
+}
