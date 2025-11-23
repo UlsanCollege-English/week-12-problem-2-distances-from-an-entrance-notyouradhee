@@ -2,8 +2,8 @@
   "tests": [
     {
       "name": "Run Tests",
-      "setup": "",
-      "run": "pytest tests/test_hw02.py -v",
+      "setup": "pip install pytest",
+      "run": "pytest tests/test_hw02.py --tb=short",
       "input": "",
       "output": "",
       "comparison": "included",
